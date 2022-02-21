@@ -75,28 +75,39 @@ namespace ExtraEncounters.Encounters
                 difficultyReq = 18,
                 randomReplaceChance = 25
             });
-
             List<EncounterBlueprintData.CardBlueprint> turn_5 = new List<EncounterBlueprintData.CardBlueprint>();
             turn_5.Add(new EncounterBlueprintData.CardBlueprint
             {
                 card = CardLoader.GetCardByName("eri_AntNestWorkerEgg")
             });
-            turn_5.Add(new EncounterBlueprintData.CardBlueprint
+
+            List<EncounterBlueprintData.CardBlueprint> turn_6 = new List<EncounterBlueprintData.CardBlueprint>();
+            turn_6.Add(new EncounterBlueprintData.CardBlueprint
+            {
+                card = CardLoader.GetCardByName("eri_AntNestWorkerEgg")
+            });
+            turn_6.Add(new EncounterBlueprintData.CardBlueprint
             {
                 card = CardLoader.GetCardByName("eri_AntNestWorkerEgg"),
                 difficultyReplace = CardLoader.GetCardByName("eri_AntHusk"),
                 difficultyReq = 13,
                 randomReplaceChance = 25
             });
-            List<EncounterBlueprintData.CardBlueprint> turn_6 = new List<EncounterBlueprintData.CardBlueprint>();
-            turn_6.Add(new EncounterBlueprintData.CardBlueprint
+
+            List<EncounterBlueprintData.CardBlueprint> turn_7 = new List<EncounterBlueprintData.CardBlueprint>();
+            turn_7.Add(new EncounterBlueprintData.CardBlueprint
+            {
+                card = CardLoader.GetCardByName("eri_AntNestWorkerEgg")
+            });
+            List<EncounterBlueprintData.CardBlueprint> turn_8 = new List<EncounterBlueprintData.CardBlueprint>();
+            turn_8.Add(new EncounterBlueprintData.CardBlueprint
             {
                 card = CardLoader.GetCardByName("eri_AntNestWorkerEgg"),
                 difficultyReplace = CardLoader.GetCardByName("eri_ExplodingAnt"),
                 difficultyReq = 18,
                 randomReplaceChance = 25
             }); 
-            turn_6.Add(new EncounterBlueprintData.CardBlueprint
+            turn_8.Add(new EncounterBlueprintData.CardBlueprint
             {
                 card = CardLoader.GetCardByName("eri_AntNestWorkerEgg"),
                 difficultyReplace = CardLoader.GetCardByName("eri_AntNestWorker"),
@@ -110,6 +121,8 @@ namespace ExtraEncounters.Encounters
             turns.Add(turn_4);
             turns.Add(turn_5);
             turns.Add(turn_6);
+            turns.Add(turn_7);
+            turns.Add(turn_8);
 
             NewEncounter.Add(
                        name,

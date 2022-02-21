@@ -1,8 +1,7 @@
 using BepInEx;
 using BepInEx.Logging;
-using System.Collections.Generic;
 using HarmonyLib;
-using BepInEx.Configuration;
+using DiskCardGame;
 
 
 namespace ExtraEncounters
@@ -32,16 +31,20 @@ namespace ExtraEncounters
 			//Abilities
 		}
 
-		private void Start()
+		[HarmonyPatch(typeof(LoadingScreenManager), "LoadGameData")]
+		public class LoadingScreenManager_LoadGameData
 		{
-			//Encounters
-			Encounters.ApeEscape.AddEncounter();
-			Encounters.EriAnt.AddEncounter();
-			Encounters.EriBird.AddEncounter();
-			Encounters.EriHooved.AddEncounter();
-			Encounters.EriWolf.AddEncounter();
-			Encounters.UndeadMarch.AddEncounter();
-
+			[HarmonyPostfix]
+			public static void Postfix()
+			{
+				//Encounters
+				Encounters.ApeEscape.AddEncounter();
+				Encounters.EriAnt.AddEncounter();
+				Encounters.EriBird.AddEncounter();
+				Encounters.EriHooved.AddEncounter();
+				Encounters.EriWolf.AddEncounter();
+				Encounters.UndeadMarch.AddEncounter();
+			}
 		}
 	}
 }
